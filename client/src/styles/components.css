@@ -1,0 +1,83 @@
+/* Component Styles - Shared across multiple components */
+
+.lang-select {
+  padding: 0.5rem 0.75rem;
+  background-color: #2a2a2a;
+  color: #e8e0d5;
+  border: 1px solid #3a3a3a;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-select:hover {
+  background-color: #333333;
+  border-color: #4a4a4a;
+}
+
+.lang-select:focus {
+  outline: none;
+  border-color: #8b7a6b;
+}
+
+.lang-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 200px;
+  gap: 1rem;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #3a3a3a;
+  border-top-color: #c4b5a5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-state p {
+  color: #9a8a7a;
+  font-size: 0.875rem;
+}
+
+.protected-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: #1a1a1a;
+  overflow: hidden;
+}
+
+/* Make sure Monaco editor fills its container */
+.monaco-editor {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.monaco-editor .overflow-guard {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Fix for editor container */
+.panel-body .monaco-editor-container {
+  height: 100%;
+  width: 100%;
+}
